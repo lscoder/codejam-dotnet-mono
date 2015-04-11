@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSCoder.CodeJam", "LSCoder.CodeJam\LSCoder.CodeJam.csproj", "{27D157E3-2517-4CA0-B88B-57ACDF8ABE49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27D157E3-2517-4CA0-B88B-57ACDF8ABE49}.Debug|x86.ActiveCfg = Debug|x86
+		{27D157E3-2517-4CA0-B88B-57ACDF8ABE49}.Debug|x86.Build.0 = Debug|x86
+		{27D157E3-2517-4CA0-B88B-57ACDF8ABE49}.Release|x86.ActiveCfg = Release|x86
+		{27D157E3-2517-4CA0-B88B-57ACDF8ABE49}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = LSCoder.CodeJam\LSCoder.CodeJam.csproj
+	EndGlobalSection
+EndGlobal
