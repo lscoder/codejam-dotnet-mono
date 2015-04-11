@@ -1,0 +1,13 @@
+bin/
+obj/
+
+*.suo
+*.in
+*.out
+*.exe
+*.mdb
+*.rar
+*.zip
+*.user
+*.swp
+.DS_Store
