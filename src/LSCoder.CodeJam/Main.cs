@@ -27,7 +27,7 @@ namespace LSCoder.CodeJam
 			scanner.Dispose();
 			outputFile.Dispose();
 			
-			Trace.WriteLine(string.Format("\nFile `{0}` created!", problemInputFile.Name));
+			Console.WriteLine(string.Format("\nFile `{0}` created!", problemInputFile.Name));
 			
 			Console.ReadKey(true);
 		}
@@ -36,7 +36,7 @@ namespace LSCoder.CodeJam
 		{
 			var testCasesCount = scanner.ReadInt();
 			
-			Trace.WriteLine(string.Format("\nRunning `{0}` test cases...\n", testCasesCount));
+			Console.WriteLine(string.Format("\nRunning `{0}` test cases...\n", testCasesCount));
 			
 			for (var testCaseId = 1; testCaseId <= testCasesCount; testCaseId++)
 			{
@@ -47,16 +47,29 @@ namespace LSCoder.CodeJam
 		
 		private static string Solve(Scanner scanner)
 		{
-			/************************** YOUR CODE HERE **************************/
-			
-			return "Your result here";
+			var lineTokens = scanner.ReadLineTokens();
+			var peopleCount = Int32.Parse(lineTokens[0]) + 1;
+			var peopleShyness = lineTokens[1];
+			var stoodUpCount = peopleShyness[0] - '0';
+			var friendsCount = 0;
+
+			for (var i = 1; i < peopleCount; i++) {
+				if(stoodUpCount < i) {
+					var newFriends = i - stoodUpCount;
+					friendsCount += newFriends;
+					stoodUpCount += newFriends;
+				}
+				stoodUpCount += peopleShyness[i] - '0';
+			}
+
+			return friendsCount.ToString();
 		}
 		
 		private static void WriteResult(int testCaseId, string result, TextWriter outputFile)
 		{
 			var formatedLine = string.Format("Case #{0}: {1}", testCaseId, result);
 			
-			Trace.WriteLine(formatedLine);
+			Console.WriteLine(formatedLine);
 			outputFile.WriteLine(formatedLine);
 		}
 	}
